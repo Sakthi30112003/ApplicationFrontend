@@ -53,6 +53,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'leaveapp'
-          slot-name: 'Production'
+          app-name: azurefronendapplication
+          slot-name: Production
           package: dist/leaveapp
