@@ -55,6 +55,6 @@ jobs:
         with:
           app-name: azurefronendapplication
           slot-name: Production
-          package: angular-dist/
+          package: dist/leaveapp/
           
           
