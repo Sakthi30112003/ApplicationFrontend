@@ -65,4 +65,5 @@ jobs:
         with:
           app-name: azurefronendapplication
           slot-name: Production
-          package: ./app/
+          package: ./app/browser
+          
