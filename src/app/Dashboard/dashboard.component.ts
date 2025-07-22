@@ -16,6 +16,14 @@ import {  HttpClient } from '@angular/common/http';
   <button (click)="toggleTable()" style="margin: 1rem;">
     {{ showTable ? 'Hide Table' : 'Show Table' }}
   </button>
+  <button (click)="getUserInfo()">Get My Info</button>
+
+<div *ngIf="userInfo">
+  <p><strong>Name:</strong> {{ userInfo.userName }}</p>
+  <p><strong>Email:</strong> {{ userInfo.email }}</p>
+  <p><strong>Object ID:</strong> {{ userInfo.objectId }}</p>
+  <p><strong>IP Address:</strong> {{ userInfo.ipAddress }}</p>
+</div>
 
   <div *ngIf="showTable && tableData.length > 0" style="overflow-x: auto; margin-top: 1.5rem;">
     <table border="1" style="margin: 0 auto; border-collapse: collapse; width: 100%;">
@@ -39,7 +47,7 @@ import {  HttpClient } from '@angular/common/http';
 export class DashboardComponent {
   private msalService = inject(MsalService);
     private http = inject(HttpClient);
-
+  userInfo: any;
   userName = '';
   showTable = false;
   userEmail = '';
@@ -69,4 +77,21 @@ export class DashboardComponent {
         this.columnKeys = data.length ? Object.keys(data[0]) : [];
       });
   }
+  getUserInfo() {
+  this.http.get<any>('https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api/Auth/me')
+    .subscribe({
+      next: data => {
+        this.userInfo = {
+          userName: data.userName,
+          email: data.email,
+          objectId: data.objectId,
+          ipAddress: data.ipAddress
+        };
+      },
+      error: err => {
+        console.error('Failed to fetch user info:', err);
+      }
+    });
+}
+
 }
