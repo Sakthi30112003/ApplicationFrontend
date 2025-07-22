@@ -78,7 +78,7 @@ export class DashboardComponent {
       });
   }
   getUserInfo() {
-  this.http.get<any>('https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api/Auth/me')
+  this.http.get<any>('https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api/Employees/me')
     .subscribe({
       next: data => {
         this.userInfo = {
