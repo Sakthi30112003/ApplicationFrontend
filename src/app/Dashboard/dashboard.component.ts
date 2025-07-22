@@ -9,7 +9,7 @@ import {  HttpClient } from '@angular/common/http';
   imports: [CommonModule],
   template: `
 <div style="padding: 2rem; max-width: 800px; margin: 0 auto; text-align: center;">
-  <h2>Welcome to Dashboard</h2>
+  <h2>Welcom to Dashboard</h2>
   <p>Hello, {{ userName }}</p>
   <p>Email: {{ userEmail }}</p>
 
