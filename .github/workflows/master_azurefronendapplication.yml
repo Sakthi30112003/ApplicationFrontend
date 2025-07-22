@@ -38,7 +38,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: angular-dist
-          path: ./dist  # Download to a dist folder
+          path: .  # Download directly to root
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -53,4 +53,4 @@ jobs:
         with:
           app-name: 'azurefronendapplication'
           slot-name: 'Production'
-          package: ./dist  # Deploy from the dist folder
+          package: .  # Deploy from root (where the built files are)
