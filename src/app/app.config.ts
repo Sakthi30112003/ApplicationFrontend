@@ -17,7 +17,7 @@ import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 const protectedResourceMap = new Map<string, string[]>([
- ['https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api',['api://f5ce4693-a450-4ba9-852d-e0db1a6b248a/access_as_user']]
+  ['https://applicationbackend-cpazegbufnhaenae.canadacentral-01.azurewebsites.net/api',['api://9536cbf5-1a05-481d-a2f5-28e259c1f9a8/access_as_user']]
 ]);
 
 export const appConfig: ApplicationConfig = {

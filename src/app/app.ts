@@ -45,7 +45,7 @@ export class AppComponent {
   }
 
   getUserProfile() {
-  this.http.get<any>('https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api/Employees/me')
+  this.http.get<any>('https://applicationbackend-cpazegbufnhaenae.canadacentral-01.azurewebsites.net/api/Employees/me')
     .subscribe({
       next: (res) => console.log('Backend API Response:', res),
       error: (err) => console.error('Backend API Error:', err)

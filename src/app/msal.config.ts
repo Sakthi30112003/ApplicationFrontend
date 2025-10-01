@@ -11,10 +11,10 @@ interface AngularMsalConfig {
 
 export const msalConfig: Configuration = {
   auth: {
-    clientId: '',
-    authority: '',
-    redirectUri: 'https://azurefronendapplication-fhc0a0dygmgsbbam.canadacentral-01.azurewebsites.net',
-     postLogoutRedirectUri: 'https://azurefronendapplication-fhc0a0dygmgsbbam.canadacentral-01.azurewebsites.net/',
+    clientId: 'd82babdc-a17b-4637-9f60-67771708520f',
+    authority: 'https://login.microsoftonline.com/b41b72d0-4e9f-4c26-8a69-f949f367c91d',
+    redirectUri: 'https://appfrontend-befph7ckbeb0euac.canadacentral-01.azurewebsites.net',
+     postLogoutRedirectUri: 'https://appfrontend-befph7ckbeb0euac.canadacentral-01.azurewebsites.net/',
   },
   cache: {
     cacheLocation: 'localStorage',
