@@ -32,7 +32,7 @@ export const msalInstance = new PublicClientApplication(msalConfig);
 export const msalAngularConfig: AngularMsalConfig = {
   interactionType: InteractionType.Redirect,
   authRequest: {
-    scopes: [''],
+    scopes: ['api://9536cbf5-1a05-481d-a2f5-28e259c1f9a8/access_as_user'],
 
   },
 };
