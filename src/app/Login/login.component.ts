@@ -16,6 +16,6 @@ export class LoginComponent {
   constructor(private msalService: MsalService) {}
 
   login() {
-    this.msalService.loginRedirect({scopes: ['api://f5ce4693-a450-4ba9-852d-e0db1a6b248a/access_as_user']});
+    this.msalService.loginRedirect({scopes: ['']});
   }
 }

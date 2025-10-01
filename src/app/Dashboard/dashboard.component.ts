@@ -71,14 +71,14 @@ export class DashboardComponent {
   this.showTable = !this.showTable;
 }
    loadTable() {
-    this.http.get<any[]>('https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api/Employees') // Use your endpoint
+    this.http.get<any[]>('') // Use your endpoint
       .subscribe(data => {
         this.tableData = data;
         this.columnKeys = data.length ? Object.keys(data[0]) : [];
       });
   }
   getUserInfo() {
-  this.http.get<any>('https://azurepracwebapp-abgegahdakaebff7.canadacentral-01.azurewebsites.net/api/Employees/me')
+  this.http.get<any>('')
     .subscribe({
       next: data => {
         this.userInfo = {
