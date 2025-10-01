@@ -21,7 +21,7 @@ import { InteractionType } from '@azure/msal-browser';
 import { msalInstance, msalAngularConfig } from './msal.config';
 
 const protectedResourceMap = new Map<string, string[]>([
-  ['https://applicationbackend-cpazegbufnhaenae.canadacentral-01.azurewebsites.net/api',['api://9536cbf5-1a05-481d-a2f5-28e259c1f9a8/access_as_user']]
+  ['https://applicationbackend-cpazegbufnhaenae.canadacentral-01.azurewebsites.net/api/',['api://9536cbf5-1a05-481d-a2f5-28e259c1f9a8/access_as_user']]
 ]);
 
 export const appConfig: ApplicationConfig = {
